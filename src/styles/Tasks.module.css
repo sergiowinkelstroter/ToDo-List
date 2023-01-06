@@ -108,3 +108,10 @@
 .task > button:hover {
   color: var(--danger);
 }
+
+@media (max-width: 768px) {
+  .tasks {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+}

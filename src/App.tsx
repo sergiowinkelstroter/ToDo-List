@@ -4,7 +4,6 @@ import { Input } from "./components/Input";
 import styles from "./App.module.css";
 import { Task, Tasks } from "./components/Tasks";
 
-import { EmptyTasks } from "./components/EmptyTasks";
 import { useState } from "react";
 
 import { v4 as uuidv4 } from "uuid";
@@ -12,7 +11,7 @@ import { v4 as uuidv4 } from "uuid";
 export const App = () => {
   const [taskList, setTaskList] = useState<Task[]>([]);
 
-  function newTask(title: string) {
+  function addNewTask(title: string) {
     const newList = [...taskList];
     newList.push({
       id: uuidv4(),
@@ -42,7 +41,7 @@ export const App = () => {
   return (
     <div className={styles.app}>
       <Header />
-      <Input onNewTask={newTask} />
+      <Input onNewTask={addNewTask} />
 
       <Tasks
         tasks={taskList}
