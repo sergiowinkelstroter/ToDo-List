@@ -42,7 +42,9 @@ export const Tasks = ({ tasks, onDeleteTask, onCompletedTask }: TasksProps) => {
                   type="checkbox"
                   onClick={() => onCompletedTask(task.id)}
                 />
-                <p>{task.title}</p>
+                <p className={task.isComplete ? styles.titlecompleted : ""}>
+                  {task.title}
+                </p>
               </div>
               <button onClick={() => onDeleteTask(task.id)}>
                 <Trash size={24} />

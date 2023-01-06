@@ -1,5 +1,5 @@
 .tasks {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   margin-top: 4rem;
@@ -48,7 +48,7 @@
   justify-content: center;
   width: 100%;
   height: 1.8rem;
-  border-radius: 100%;
+  border-radius: 999px;
   background-color: var(--gray-400);
   padding: 0.5rem;
 }
@@ -107,6 +107,10 @@
 
 .task > button:hover {
   color: var(--danger);
+}
+
+.titlecompleted {
+  text-decoration: line-through;
 }
 
 @media (max-width: 768px) {
